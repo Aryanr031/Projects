@@ -1,8 +1,8 @@
 from twilio.rest import Client
-TWILIO_ACCOUNT_SID = 'ACc9dd9b4c7f228a3ecd388f16fc2ca13f'
-TWILIO_AUTH_TOKEN = '31f9233df1d23b9f6d68f9ce8c0f0890'
-TWILIO_PHONE_NUMBER = '+12546153565'
-YOUR_PHONE_NUMBER = '+916006460798'
+TWILIO_ACCOUNT_SID = 'ACc9dd9b4c7f228a3ecd**********'
+TWILIO_AUTH_TOKEN = '31f9233df1d23b9f6d68f9ce8c*****'
+TWILIO_PHONE_NUMBER = '+125461*****'
+YOUR_PHONE_NUMBER = '+9160064*****'
 from flask import Flask, render_template,request
 
 
@@ -31,10 +31,10 @@ def result():
     score = request.args.get('score')
     return render_template('result.html', score=score)
 def send_sms(score):
-    TWILIO_ACCOUNT_SID = 'ACc9dd9b4c7f228a3ecd388f16fc2ca13f'
-    TWILIO_AUTH_TOKEN = '31f9233df1d23b9f6d68f9ce8c0f0890'
-    TWILIO_PHONE_NUMBER = '+12546153565'
-    YOUR_PHONE_NUMBER = '+916006460798'
+    TWILIO_ACCOUNT_SID = 'ACc9dd9b4c7f228a3ecd388f16*******'
+    TWILIO_AUTH_TOKEN = '31f9233df1d23b9f6d68f**********'
+    TWILIO_PHONE_NUMBER = '+12546********'
+    YOUR_PHONE_NUMBER = '+9160064*****'
     client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
     message = f"High PHQ score alert! Total score: {score}"
     client.messages.create(
